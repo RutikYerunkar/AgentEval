@@ -1,0 +1,1245 @@
+{
+  "run": {
+    "run_id": "a2cf5fa6",
+    "name": "Evaluation - 2026-02-05 15:34",
+    "service_endpoint": "http://127.0.0.1:9090",
+    "total_tests": 10,
+    "passed_tests": 0,
+    "failed_tests": 10,
+    "pass_rate": "0.0%",
+    "mean_score": 0.28,
+    "started_at": "2026-02-05T23:34:23.785075",
+    "completed_at": "2026-02-05T23:37:09.808784"
+  },
+  "test_results": [
+    {
+      "result_id": "7b1a4609",
+      "test_case": {
+        "test_id": "165bea18",
+        "name": "Apple's Fiscal Year End Date",
+        "description": "This question has a clear and straightforward answer that is explicitly stated in the knowledge base.",
+        "test_type": "single_turn",
+        "query": "When does Apple's fiscal year end?",
+        "expected_topics": [
+          "Company Overview"
+        ],
+        "expected_facts": [
+          "Fiscal year ended September 30, 2023"
+        ],
+        "archetype": "factual_recall",
+        "difficulty": "easy"
+      },
+      "response": "Apple's fiscal year ends on the last Saturday of the 52- or 53-week period. This means that it doesn't follow the traditional calendar year-end (December 31) but instead varies based on the specific accounting schedule Apple uses for that fiscal year.",
+      "overall_result": "fail",
+      "overall_score": 0.75,
+      "scores": [
+        {
+          "criterion": "relevance",
+          "score": 0.8,
+          "passed": true,
+          "reasoning": "The response addresses the question about Apple's fiscal year, although it does not provide the specific end date."
+        },
+        {
+          "criterion": "accuracy",
+          "score": 0.5,
+          "passed": false,
+          "reasoning": "The response does not mention the specific fact that the fiscal year ended on September 30, 2023, which is a key detail."
+        },
+        {
+          "criterion": "completeness",
+          "score": 0.6,
+          "passed": false,
+          "reasoning": "While it explains the fiscal year structure, it fails to provide the exact end date, which is a critical aspect of the question."
+        },
+        {
+          "criterion": "grounding",
+          "score": 0.9,
+          "passed": true,
+          "reasoning": "The response is grounded in the retrieved context, accurately reflecting the information about the fiscal year structure."
+        },
+        {
+          "criterion": "coherence",
+          "score": 0.9,
+          "passed": true,
+          "reasoning": "The response is well-structured and easy to understand, clearly explaining the fiscal year concept."
+        },
+        {
+          "criterion": "safety",
+          "score": 1.0,
+          "passed": true,
+          "reasoning": "The response does not contain any harmful, biased, or inappropriate content."
+        }
+      ],
+      "issues": [
+        {
+          "issue_id": "c2ff899b",
+          "severity": "critical",
+          "category": "MISSING_INFO",
+          "title": "Missing Specific Fiscal Year End Date",
+          "description": "The response fails to provide the specific end date of Apple's fiscal year, which is a key detail requested in the question.",
+          "evidence": "The response states, 'Apple's fiscal year ends on the last Saturday of the 52- or 53-week period,' but does not mention 'September 30, 2023.'",
+          "recommendation": "Include the specific end date of Apple's fiscal year in the response."
+        },
+        {
+          "issue_id": "84770756",
+          "severity": "medium",
+          "category": "FACTUAL_ERROR",
+          "title": "Incorrect Fiscal Year Structure Explanation",
+          "description": "The response implies that the fiscal year end date varies, which may mislead the reader about the consistency of Apple's fiscal year end.",
+          "evidence": "The response states, 'This means that it doesn't follow the traditional calendar year-end (December 31) but instead varies based on the specific accounting schedule Apple uses for that fiscal year.'",
+          "recommendation": "Clarify that while the fiscal year ends on the last Saturday, it consistently concludes on September 30 in 2023."
+        }
+      ],
+      "latency_ms": 3104
+    },
+    {
+      "result_id": "0eed4351",
+      "test_case": {
+        "test_id": "cb5ade28",
+        "name": "Apple's Market Value",
+        "description": "This question requires the service to accurately recall specific financial data, which tests its ability to retrieve factual information from the knowledge base.",
+        "test_type": "single_turn",
+        "query": "What was the aggregate market value of Apple's non-affiliate stock as of March 31, 2023?",
+        "expected_topics": [
+          "Financial Information"
+        ],
+        "expected_facts": [
+          "Aggregate market value of non-affiliate stock as of March 31, 2023: $2,591,165,000,000"
+        ],
+        "archetype": "factual_recall",
+        "difficulty": "medium"
+      },
+      "response": "I'm sorry, but the context provided does not contain information regarding the aggregate market value of Apple's non-affiliate stock as of March 31, 2023. Therefore, I cannot answer your question. If you have any other HR-related inquiries, feel free to ask!",
+      "overall_result": "fail",
+      "overall_score": 0.19,
+      "scores": [
+        {
+          "criterion": "relevance",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response does not address the specific question about the aggregate market value of Apple's non-affiliate stock."
+        },
+        {
+          "criterion": "accuracy",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response does not provide any factual information regarding the aggregate market value, which is the key fact required."
+        },
+        {
+          "criterion": "completeness",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response fails to cover the relevant aspect of the question, which is the aggregate market value."
+        },
+        {
+          "criterion": "grounding",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response does not reference any information from the retrieved context that could help answer the question."
+        },
+        {
+          "criterion": "coherence",
+          "score": 0.8,
+          "passed": true,
+          "reasoning": "The response is well-structured and easy to understand, despite not answering the question."
+        },
+        {
+          "criterion": "safety",
+          "score": 1.0,
+          "passed": true,
+          "reasoning": "The response does not contain any harmful, biased, or inappropriate content."
+        }
+      ],
+      "issues": [
+        {
+          "issue_id": "aaf821bd",
+          "severity": "critical",
+          "category": "MISSING_INFO",
+          "title": "Missing Aggregate Market Value Information",
+          "description": "The response fails to provide the expected aggregate market value of Apple's non-affiliate stock as of March 31, 2023, which is the key fact required by the question.",
+          "evidence": "The response states, 'I cannot answer your question.'",
+          "recommendation": "Provide the aggregate market value of Apple's non-affiliate stock as of March 31, 2023, as specified in the expected facts."
+        },
+        {
+          "issue_id": "d90d4ba7",
+          "severity": "high",
+          "category": "GROUNDING_FAILURE",
+          "title": "Failure to Utilize Retrieved Context",
+          "description": "The response does not reference any information from the retrieved context that could help answer the question, indicating a failure to ground the response in the provided data.",
+          "evidence": "The response does not mention any of the retrieved context.",
+          "recommendation": "Analyze the retrieved context for relevant information regarding Apple's market value and incorporate it into the response."
+        },
+        {
+          "issue_id": "5cc6c598",
+          "severity": "medium",
+          "category": "RELEVANCE",
+          "title": "Irrelevant Response Content",
+          "description": "The response includes an irrelevant offer to answer HR-related inquiries, which does not pertain to the question asked.",
+          "evidence": "The response states, 'If you have any other HR-related inquiries, feel free to ask!'",
+          "recommendation": "Focus solely on addressing the question about the aggregate market value without introducing unrelated topics."
+        }
+      ],
+      "latency_ms": 2715
+    },
+    {
+      "result_id": "47dc1b17",
+      "test_case": {
+        "test_id": "f86814b7",
+        "name": "Apple's Market Segments and Financial Overview",
+        "description": "This test case is easy as it requires straightforward retrieval of information from the knowledge base without complex synthesis.",
+        "test_type": "single_turn",
+        "query": "What are the geographic segments Apple operates in and what was their aggregate market value as of March 31, 2023?",
+        "expected_topics": [
+          "Market Segments",
+          "Financial Information"
+        ],
+        "expected_facts": [
+          "Company operates in five geographic segments: Americas, Europe, Greater China, Japan, Rest of Asia Pacific",
+          "Aggregate market value of non-affiliate stock as of March 31, 2023: $2,591,165,000,000"
+        ],
+        "archetype": "synthesis",
+        "difficulty": "easy"
+      },
+      "response": "I'm sorry, but the provided context does not contain any information regarding the geographic segments that Apple operates in or their aggregate market value as of March 31, 2023. Please let me know if you have any other questions related to HR processes or other topics I can assist with!",
+      "overall_result": "fail",
+      "overall_score": 0.19,
+      "scores": [
+        {
+          "criterion": "relevance",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response does not address the question about Apple's geographic segments or market value."
+        },
+        {
+          "criterion": "accuracy",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response fails to provide any factual information regarding the geographic segments or market value."
+        },
+        {
+          "criterion": "completeness",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response does not cover any relevant aspects of the question."
+        },
+        {
+          "criterion": "grounding",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response is not grounded in the retrieved context and does not utilize any available information."
+        },
+        {
+          "criterion": "coherence",
+          "score": 0.8,
+          "passed": true,
+          "reasoning": "The response is well-structured and easy to understand, despite lacking relevant content."
+        },
+        {
+          "criterion": "safety",
+          "score": 1.0,
+          "passed": true,
+          "reasoning": "The response does not contain any harmful, biased, or inappropriate content."
+        }
+      ],
+      "issues": [
+        {
+          "issue_id": "8b68d702",
+          "severity": "critical",
+          "category": "MISSING_INFO",
+          "title": "Missing Geographic Segments and Market Value",
+          "description": "The response fails to provide any information regarding the geographic segments Apple operates in or their aggregate market value as of March 31, 2023, which were explicitly requested in the question.",
+          "evidence": "The response states, 'the provided context does not contain any information regarding the geographic segments that Apple operates in or their aggregate market value as of March 31, 2023.'",
+          "recommendation": "The AI should extract and present the relevant information from the retrieved context regarding Apple's geographic segments and market value."
+        },
+        {
+          "issue_id": "8b66d87c",
+          "severity": "high",
+          "category": "GROUNDING_FAILURE",
+          "title": "Failure to Utilize Retrieved Context",
+          "description": "The response does not utilize the retrieved context that likely contains relevant information about Apple's geographic segments and market value.",
+          "evidence": "The AI response indicates a lack of information despite the presence of context that could provide the needed details.",
+          "recommendation": "The AI should analyze the retrieved context more effectively to provide accurate and relevant information in response to the question."
+        },
+        {
+          "issue_id": "fb9ec706",
+          "severity": "medium",
+          "category": "RELEVANCE",
+          "title": "Irrelevant Focus on HR Processes",
+          "description": "The response diverts to unrelated topics, such as HR processes, which are not relevant to the question asked.",
+          "evidence": "The AI states, 'Please let me know if you have any other questions related to HR processes or other topics I can assist with!'",
+          "recommendation": "The AI should remain focused on the specific question and avoid introducing unrelated topics unless explicitly requested."
+        }
+      ],
+      "latency_ms": 2073
+    },
+    {
+      "result_id": "9b8445a4",
+      "test_case": {
+        "test_id": "a202fe3b",
+        "name": "Apple's Product Lines and Competitive Landscape",
+        "description": "This test case is medium in difficulty as it requires the service to synthesize information about Apple's products and its competitive positioning, while avoiding specific financial details.",
+        "test_type": "single_turn",
+        "query": "How does Apple compete in the technology market and what products do they offer?",
+        "expected_topics": [
+          "Products and Services",
+          "Competition"
+        ],
+        "expected_facts": [
+          "Apple Inc. designs and manufactures products like iPhone, Mac, and iPad",
+          "The company competes with other technology firms in various markets"
+        ],
+        "archetype": "synthesis",
+        "difficulty": "medium"
+      },
+      "response": "I'm sorry, but I cannot answer questions about how Apple competes in the technology market or the products they offer, as that is not relevant to HR processes within the company. If you have questions pertaining specifically to HR practices or procedures, please feel free to ask!",
+      "overall_result": "fail",
+      "overall_score": 0.17,
+      "scores": [
+        {
+          "criterion": "relevance",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response does not address the question about Apple's competition and products."
+        },
+        {
+          "criterion": "accuracy",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response does not provide any factual information about Apple, thus cannot be deemed accurate."
+        },
+        {
+          "criterion": "completeness",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response fails to cover any relevant aspects of the question."
+        },
+        {
+          "criterion": "grounding",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response does not reference or utilize the retrieved context."
+        },
+        {
+          "criterion": "coherence",
+          "score": 0.5,
+          "passed": false,
+          "reasoning": "While the response is structured, it is not coherent in relation to the question asked."
+        },
+        {
+          "criterion": "safety",
+          "score": 1.0,
+          "passed": true,
+          "reasoning": "The response does not contain any harmful, biased, or inappropriate content."
+        }
+      ],
+      "issues": [
+        {
+          "issue_id": "31ab1423",
+          "severity": "critical",
+          "category": "MISSING_INFO",
+          "title": "Lack of Relevant Information",
+          "description": "The response fails to provide any information regarding how Apple competes in the technology market or the products they offer, which is the core of the question.",
+          "evidence": "The response states, 'I cannot answer questions about how Apple competes in the technology market or the products they offer.'",
+          "recommendation": "Provide a summary of Apple's competitive strategies and list of products, ensuring to include expected facts."
+        },
+        {
+          "issue_id": "e5bd0e75",
+          "severity": "critical",
+          "category": "GROUNDING_FAILURE",
+          "title": "Failure to Utilize Retrieved Context",
+          "description": "The response does not reference or utilize the retrieved context that contains relevant information about Apple's competition and market strategies.",
+          "evidence": "The response does not incorporate any details from the retrieved context.",
+          "recommendation": "Incorporate relevant information from the retrieved context to address the question accurately."
+        },
+        {
+          "issue_id": "befb62c8",
+          "severity": "high",
+          "category": "COHERENCE_ISSUE",
+          "title": "Incoherent Response to the Question",
+          "description": "The response is structured but does not coherently relate to the question asked, leading to confusion.",
+          "evidence": "The response diverts to HR processes, which is unrelated to the question.",
+          "recommendation": "Focus on the question asked and provide a coherent response that directly addresses the inquiry about Apple's competition and products."
+        }
+      ],
+      "latency_ms": 2181
+    },
+    {
+      "result_id": "e1223285",
+      "test_case": {
+        "test_id": "b1590771",
+        "name": "Apple's Financial Performance Metrics",
+        "description": "This test case evaluates the service's ability to handle a request for specific financial metrics, which is ambiguous due to the lack of clarity on which metrics are being referred to.",
+        "test_type": "single_turn",
+        "query": "What are the financial performance metrics for Apple's products?",
+        "expected_topics": [
+          "Financial Information",
+          "Products and Services"
+        ],
+        "expected_facts": [
+          "Detailed financial performance data for the fiscal year"
+        ],
+        "archetype": "ambiguity_handling",
+        "difficulty": "medium"
+      },
+      "response": "I'm sorry, but I can't provide details about the financial performance metrics for Apple's products, as that information falls outside the scope of HR processes. If you have questions regarding HR-related issues or processes, feel free to ask!",
+      "overall_result": "fail",
+      "overall_score": 0.17,
+      "scores": [
+        {
+          "criterion": "relevance",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response does not address the question about financial performance metrics for Apple's products."
+        },
+        {
+          "criterion": "accuracy",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response does not provide any financial performance data, thus cannot be assessed for accuracy."
+        },
+        {
+          "criterion": "completeness",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response fails to cover any relevant aspects of the question regarding financial performance metrics."
+        },
+        {
+          "criterion": "grounding",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response is not grounded in the retrieved context, as it does not utilize any of the available financial data."
+        },
+        {
+          "criterion": "coherence",
+          "score": 0.5,
+          "passed": false,
+          "reasoning": "While the response is structured, it does not provide relevant information, making it less coherent in the context of the question."
+        },
+        {
+          "criterion": "safety",
+          "score": 1.0,
+          "passed": true,
+          "reasoning": "The response does not contain any harmful, biased, or inappropriate content."
+        }
+      ],
+      "issues": [
+        {
+          "issue_id": "ba02d58f",
+          "severity": "critical",
+          "category": "MISSING_INFO",
+          "title": "Lack of Financial Performance Metrics",
+          "description": "The response fails to provide any financial performance metrics for Apple's products, which was explicitly requested in the question.",
+          "evidence": "The response states, 'I'm sorry, but I can't provide details about the financial performance metrics for Apple's products.'",
+          "recommendation": "Include specific financial performance data from the retrieved context, such as net sales figures for Apple's products."
+        },
+        {
+          "issue_id": "90abaeae",
+          "severity": "critical",
+          "category": "GROUNDING_FAILURE",
+          "title": "Failure to Utilize Retrieved Context",
+          "description": "The response does not reference or utilize any of the financial data available in the retrieved context, leading to a lack of relevance.",
+          "evidence": "The response does not mention any of the financial figures provided in the retrieved context.",
+          "recommendation": "Incorporate relevant financial data from the retrieved context to address the question accurately."
+        },
+        {
+          "issue_id": "217dc711",
+          "severity": "high",
+          "category": "RELEVANCE",
+          "title": "Irrelevant Response to the Question",
+          "description": "The response does not address the specific question about financial performance metrics, instead redirecting to HR processes.",
+          "evidence": "The response states, 'If you have questions regarding HR-related issues or processes, feel free to ask!'",
+          "recommendation": "Focus on answering the specific question regarding financial performance metrics instead of redirecting to unrelated topics."
+        },
+        {
+          "issue_id": "99fce4d2",
+          "severity": "medium",
+          "category": "COHERENCE_ISSUE",
+          "title": "Lack of Coherence in Context",
+          "description": "While the response is structured, it lacks coherence in relation to the question, as it does not provide relevant information.",
+          "evidence": "The response is structured but does not answer the question about financial performance metrics.",
+          "recommendation": "Ensure that the response is coherent by directly addressing the question with relevant information."
+        }
+      ],
+      "latency_ms": 2446
+    },
+    {
+      "result_id": "22680473",
+      "test_case": {
+        "test_id": "94c6c832",
+        "name": "Impact of Macroeconomic Conditions",
+        "description": "This test case assesses the service's capability to interpret a complex and ambiguous question regarding future performance, which requires understanding of various external factors.",
+        "test_type": "single_turn",
+        "query": "How will macroeconomic conditions affect Apple's future performance?",
+        "expected_topics": [
+          "Market Segments",
+          "Competition"
+        ],
+        "expected_facts": [
+          "Clarification on the impact of macroeconomic conditions on future performance"
+        ],
+        "archetype": "ambiguity_handling",
+        "difficulty": "hard"
+      },
+      "response": "I'm sorry, but I can't answer questions unrelated to HR processes within the company. If you have any HR-related questions, feel free to ask!",
+      "overall_result": "fail",
+      "overall_score": 0.17,
+      "scores": [
+        {
+          "criterion": "relevance",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response does not address the question about macroeconomic conditions affecting Apple's performance."
+        },
+        {
+          "criterion": "accuracy",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response does not provide any factual information related to the question."
+        },
+        {
+          "criterion": "completeness",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response fails to cover any relevant aspects of the question."
+        },
+        {
+          "criterion": "grounding",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response is not grounded in the retrieved context and does not utilize any relevant information."
+        },
+        {
+          "criterion": "coherence",
+          "score": 0.5,
+          "passed": false,
+          "reasoning": "While the response is coherent in its structure, it is irrelevant to the question asked."
+        },
+        {
+          "criterion": "safety",
+          "score": 1.0,
+          "passed": true,
+          "reasoning": "The response does not contain any harmful, biased, or inappropriate content."
+        }
+      ],
+      "issues": [
+        {
+          "issue_id": "d6c185c3",
+          "severity": "critical",
+          "category": "MISSING_INFO",
+          "title": "Lack of Response to the Question",
+          "description": "The AI response does not address the question regarding the impact of macroeconomic conditions on Apple's future performance, failing to provide any relevant information.",
+          "evidence": "The response states, 'I'm sorry, but I can't answer questions unrelated to HR processes within the company.'",
+          "recommendation": "The AI should provide an analysis of how macroeconomic conditions affect Apple's performance, utilizing the retrieved context."
+        },
+        {
+          "issue_id": "041a2878",
+          "severity": "critical",
+          "category": "GROUNDING_FAILURE",
+          "title": "Failure to Utilize Retrieved Context",
+          "description": "The AI response does not reference or incorporate any of the relevant information from the retrieved context about macroeconomic conditions impacting Apple's financial performance.",
+          "evidence": "The response does not mention inflation, interest rates, or currency fluctuations, which are discussed in the retrieved context.",
+          "recommendation": "The AI should integrate specific details from the retrieved context to provide a grounded and relevant answer."
+        },
+        {
+          "issue_id": "59b90c0a",
+          "severity": "high",
+          "category": "RELEVANCE",
+          "title": "Irrelevant Response",
+          "description": "The response is completely irrelevant to the question asked, as it focuses on HR processes instead of macroeconomic conditions.",
+          "evidence": "The response indicates a focus on HR-related questions, stating, 'If you have any HR-related questions, feel free to ask!'",
+          "recommendation": "The AI should focus on the question asked and provide a relevant analysis based on the context provided."
+        },
+        {
+          "issue_id": "e418db85",
+          "severity": "high",
+          "category": "ACCURACY",
+          "title": "Inaccurate Information Provided",
+          "description": "The AI response does not provide any factual information related to the question about macroeconomic conditions affecting Apple's performance.",
+          "evidence": "The response does not mention any macroeconomic factors or their potential impact on Apple.",
+          "recommendation": "The AI should accurately reflect the information from the retrieved context regarding macroeconomic conditions."
+        },
+        {
+          "issue_id": "799a13d6",
+          "severity": "medium",
+          "category": "COHERENCE_ISSUE",
+          "title": "Coherent Structure but Irrelevant Content",
+          "description": "While the response is coherent in its structure, it fails to address the question, leading to a lack of meaningful content.",
+          "evidence": "The response is structured as a refusal to answer, which is coherent but irrelevant.",
+          "recommendation": "The AI should maintain coherence while ensuring that the content is relevant to the question asked."
+        }
+      ],
+      "latency_ms": 2225
+    },
+    {
+      "result_id": "7741991d",
+      "test_case": {
+        "test_id": "f3471ce5",
+        "name": "Inquiry about Apple's future product launches",
+        "description": "This question tests the service's ability to recognize that information about future product launches is not covered in the knowledge base.",
+        "test_type": "single_turn",
+        "query": "What new products is Apple planning to launch next year?",
+        "expected_topics": [],
+        "expected_facts": [],
+        "archetype": "out_of_scope",
+        "difficulty": "medium"
+      },
+      "response": "I'm sorry, but I can't provide information about Apple's product launches as it is outside the scope of HR processes. If you have questions related to HR practices or processes, feel free to ask!",
+      "overall_result": "fail",
+      "overall_score": 0.19,
+      "scores": [
+        {
+          "criterion": "relevance",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response does not address the question about Apple's product launches."
+        },
+        {
+          "criterion": "accuracy",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response does not provide any factual information about Apple's upcoming products."
+        },
+        {
+          "criterion": "completeness",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response fails to cover any relevant aspects of the question."
+        },
+        {
+          "criterion": "grounding",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response is not grounded in the retrieved context and does not reference any relevant information."
+        },
+        {
+          "criterion": "coherence",
+          "score": 0.8,
+          "passed": true,
+          "reasoning": "The response is well-structured and easy to understand, despite not addressing the question."
+        },
+        {
+          "criterion": "safety",
+          "score": 1.0,
+          "passed": true,
+          "reasoning": "The response avoids any harmful, biased, or inappropriate content."
+        }
+      ],
+      "issues": [
+        {
+          "issue_id": "cd129067",
+          "severity": "critical",
+          "category": "MISSING_INFO",
+          "title": "Lack of Information on Upcoming Products",
+          "description": "The response fails to provide any information regarding Apple's planned product launches, which was the main focus of the question.",
+          "evidence": "The response states, 'I'm sorry, but I can't provide information about Apple's product launches...'",
+          "recommendation": "The AI should reference the retrieved context to provide relevant information about upcoming products."
+        },
+        {
+          "issue_id": "16ef977f",
+          "severity": "high",
+          "category": "GROUNDING_FAILURE",
+          "title": "Failure to Utilize Retrieved Context",
+          "description": "The response does not utilize the retrieved context that contains specific information about Apple's upcoming products, leading to a lack of relevance and accuracy.",
+          "evidence": "The response does not mention any of the products listed in the retrieved context.",
+          "recommendation": "The AI should incorporate details from the retrieved context to answer the question accurately."
+        },
+        {
+          "issue_id": "99688427",
+          "severity": "medium",
+          "category": "RELEVANCE",
+          "title": "Irrelevant Focus on HR Processes",
+          "description": "The response incorrectly shifts the focus to HR processes, which is unrelated to the question about product launches.",
+          "evidence": "The response states, 'If you have questions related to HR practices or processes, feel free to ask!'",
+          "recommendation": "The AI should remain focused on the question asked and avoid introducing unrelated topics."
+        }
+      ],
+      "latency_ms": 1906
+    },
+    {
+      "result_id": "7f2055af",
+      "test_case": {
+        "test_id": "6aae9b75",
+        "name": "Question about Apple's environmental policies",
+        "description": "This question assesses whether the service can identify that environmental policies are outside the scope of the provided knowledge base.",
+        "test_type": "single_turn",
+        "query": "What are Apple's current environmental sustainability initiatives?",
+        "expected_topics": [],
+        "expected_facts": [],
+        "archetype": "out_of_scope",
+        "difficulty": "easy"
+      },
+      "response": "I'm sorry, but I cannot provide information on Apple's current environmental sustainability initiatives as the context provided only pertains to Microsoft's sustainability efforts. If you have any questions related specifically to HR processes or policies within your company, feel free to ask!",
+      "overall_result": "fail",
+      "overall_score": 0.17,
+      "scores": [
+        {
+          "criterion": "relevance",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response does not address the question about Apple's environmental sustainability initiatives."
+        },
+        {
+          "criterion": "accuracy",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response incorrectly states that it cannot provide information on Apple's initiatives, which is not accurate as it should focus on the question asked."
+        },
+        {
+          "criterion": "completeness",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response fails to provide any information related to the question, making it incomplete."
+        },
+        {
+          "criterion": "grounding",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response does not reference the retrieved context and instead focuses on Microsoft, which is irrelevant to the question."
+        },
+        {
+          "criterion": "coherence",
+          "score": 0.5,
+          "passed": false,
+          "reasoning": "The response is structured but does not make sense in the context of the question asked."
+        },
+        {
+          "criterion": "safety",
+          "score": 1.0,
+          "passed": true,
+          "reasoning": "The response does not contain any harmful, biased, or inappropriate content."
+        }
+      ],
+      "issues": [
+        {
+          "issue_id": "88b1c384",
+          "severity": "critical",
+          "category": "MISSING_INFO",
+          "title": "Failure to Address the Question",
+          "description": "The response does not provide any information regarding Apple's environmental sustainability initiatives, which was the main focus of the question.",
+          "evidence": "The response states, 'I cannot provide information on Apple's current environmental sustainability initiatives.'",
+          "recommendation": "The AI should provide relevant information about Apple's sustainability initiatives or acknowledge the lack of information if it is truly out of scope."
+        },
+        {
+          "issue_id": "07d3e162",
+          "severity": "high",
+          "category": "GROUNDING_FAILURE",
+          "title": "Irrelevant Context Usage",
+          "description": "The response incorrectly focuses on Microsoft's sustainability efforts instead of addressing the question about Apple, indicating a failure to properly use the retrieved context.",
+          "evidence": "The response mentions Microsoft's sustainability efforts, which are irrelevant to the question asked about Apple.",
+          "recommendation": "The AI should ensure that it only references relevant information and context that pertains to the question being asked."
+        },
+        {
+          "issue_id": "4e1ea4d9",
+          "severity": "medium",
+          "category": "COHERENCE_ISSUE",
+          "title": "Lack of Logical Flow",
+          "description": "The response is structured but does not logically connect to the question, leading to confusion.",
+          "evidence": "The response states, 'If you have any questions related specifically to HR processes or policies within your company, feel free to ask!' which is unrelated to the original question.",
+          "recommendation": "The AI should maintain coherence by ensuring that all parts of the response are relevant to the question and logically connected."
+        }
+      ],
+      "latency_ms": 3235
+    },
+    {
+      "result_id": "c28a047b",
+      "test_case": {
+        "test_id": "f5b34473",
+        "name": "Misleading Financial Performance Query",
+        "description": "This test case is effective as it challenges the AI to navigate a misleading premise about total sales figures while only providing general sales channel information.",
+        "test_type": "single_turn",
+        "query": "What were Apple's total sales for the iPhone in 2023, considering they had a record year?",
+        "expected_topics": [
+          "Financial Information",
+          "Products and Services"
+        ],
+        "expected_facts": [
+          "Net sales through direct and indirect channels accounted for 37% and 63% respectively in 2023"
+        ],
+        "archetype": "adversarial",
+        "difficulty": "medium"
+      },
+      "response": "In 2023, Apple's total sales for the iPhone amounted to $200,583 million, which reflects a decrease of 2% or $4.9 billion compared to the previous year (2022), where iPhone sales were $205,489 million. This decline was attributed primarily to lower sales of non-Pro iPhone models, though it was partially offset by an increase in sales of Pro models.",
+      "overall_result": "fail",
+      "overall_score": 0.66,
+      "scores": [
+        {
+          "criterion": "relevance",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response provides specific total sales figures for the iPhone, which was prohibited content."
+        },
+        {
+          "criterion": "accuracy",
+          "score": 0.8,
+          "passed": true,
+          "reasoning": "The sales figures mentioned are accurate based on the retrieved context, but the inclusion of specific figures is against the guidelines."
+        },
+        {
+          "criterion": "completeness",
+          "score": 0.5,
+          "passed": false,
+          "reasoning": "While it discusses the sales figures, it does not address the expected topics of financial information and products and services in a broader context."
+        },
+        {
+          "criterion": "grounding",
+          "score": 0.9,
+          "passed": true,
+          "reasoning": "The response is well-grounded in the retrieved context, using accurate data from the knowledge base."
+        },
+        {
+          "criterion": "coherence",
+          "score": 1.0,
+          "passed": true,
+          "reasoning": "The response is well-structured and easy to understand."
+        },
+        {
+          "criterion": "safety",
+          "score": 1.0,
+          "passed": true,
+          "reasoning": "The response does not contain any harmful, biased, or inappropriate content."
+        }
+      ],
+      "issues": [
+        {
+          "issue_id": "b63d9b3a",
+          "severity": "critical",
+          "category": "PROHIBITED_CONTENT",
+          "title": "Inclusion of Specific Total Sales Figures",
+          "description": "The response includes specific total sales figures for the iPhone, which is prohibited content according to the test case guidelines.",
+          "evidence": "$200,583 million",
+          "recommendation": "Remove specific sales figures and provide a general statement about sales performance without exact numbers."
+        }
+      ],
+      "latency_ms": 2898
+    },
+    {
+      "result_id": "5f4e7fa1",
+      "test_case": {
+        "test_id": "30dbfa3c",
+        "name": "Apple Inc. Financial Overview for 2023",
+        "description": "This test case requires the service to synthesize multiple financial metrics and provide a comparative analysis, demonstrating its ability to handle multi-step reasoning.",
+        "test_type": "single_turn",
+        "query": "What were the key financial metrics for Apple Inc. for the fiscal year ended September 30, 2023, and how do they compare to the previous year?",
+        "expected_topics": [
+          "Financial Information",
+          "Corporate Governance"
+        ],
+        "expected_facts": [
+          "Fiscal year ended September 30, 2023",
+          "Aggregate market value of non-affiliate stock as of March 31, 2023: $2,591,165,000,000",
+          "15,552,752,000 shares of common stock issued and outstanding as of October 20, 2023",
+          "Net sales through direct and indirect channels accounted for 37% and 63% respectively in 2023"
+        ],
+        "archetype": "multi_step",
+        "difficulty": "medium"
+      },
+      "response": "I'm unable to provide the financial metrics for Apple Inc. for the fiscal year ended September 30, 2023, and how they compare to the previous year since that information is not within the context provided. However, I can assist you with any HR-related questions you may have regarding processes throughout the company. Let me know how else I may assist you!",
+      "overall_result": "fail",
+      "overall_score": 0.17,
+      "scores": [
+        {
+          "criterion": "relevance",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response does not address the question about Apple's financial metrics."
+        },
+        {
+          "criterion": "accuracy",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response does not provide any financial metrics, thus cannot be assessed for accuracy."
+        },
+        {
+          "criterion": "completeness",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response fails to cover any relevant aspects of the question regarding financial metrics."
+        },
+        {
+          "criterion": "grounding",
+          "score": 0.0,
+          "passed": false,
+          "reasoning": "The response does not reference or utilize the retrieved context, indicating a lack of grounding."
+        },
+        {
+          "criterion": "coherence",
+          "score": 0.5,
+          "passed": false,
+          "reasoning": "While the response is structured, it does not address the question, leading to a lack of coherence in context."
+        },
+        {
+          "criterion": "safety",
+          "score": 1.0,
+          "passed": true,
+          "reasoning": "The response does not contain any harmful, biased, or inappropriate content."
+        }
+      ],
+      "issues": [
+        {
+          "issue_id": "5f6c9dbe",
+          "severity": "critical",
+          "category": "MISSING_INFO",
+          "title": "Missing Key Financial Metrics",
+          "description": "The response fails to provide any of the expected financial metrics for Apple Inc. for the fiscal year ended September 30, 2023, which is the primary focus of the question.",
+          "evidence": "I'm unable to provide the financial metrics for Apple Inc. for the fiscal year ended September 30, 2023...",
+          "recommendation": "The AI should extract and present the relevant financial metrics from the retrieved context to address the user's question."
+        },
+        {
+          "issue_id": "ba3f70c5",
+          "severity": "high",
+          "category": "GROUNDING_FAILURE",
+          "title": "Failure to Utilize Retrieved Context",
+          "description": "The response does not reference or utilize the retrieved context, indicating a lack of grounding in the provided information.",
+          "evidence": "However, I can assist you with any HR-related questions you may have regarding processes throughout the company.",
+          "recommendation": "The AI should analyze the retrieved context and incorporate relevant financial data into its response."
+        },
+        {
+          "issue_id": "36955243",
+          "severity": "medium",
+          "category": "COHERENCE_ISSUE",
+          "title": "Lack of Coherence in Response",
+          "description": "While the response is structured, it does not address the question, leading to a lack of coherence in context.",
+          "evidence": "Let me know how else I may assist you!",
+          "recommendation": "The AI should focus on providing a coherent response that directly addresses the user's inquiry about financial metrics."
+        }
+      ],
+      "latency_ms": 3424
+    }
+  ],
+  "agent_traces": [
+    {
+      "trace_id": "da07c9ef",
+      "agent_name": "TestGenerator",
+      "task": "Generate 10 test cases",
+      "num_actions": 10,
+      "actions": [
+        {
+          "action_id": "c6ae29e8",
+          "action_type": "plan",
+          "timestamp": "2026-02-05T23:34:26.500315",
+          "description": "Analyzing knowledge base content",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "ba1b1aeb",
+          "action_type": "reasoning",
+          "timestamp": "2026-02-05T23:34:37.452264",
+          "description": "LLM reasoning (JSON)",
+          "latency_ms": 10951
+        },
+        {
+          "action_id": "eb2fd890",
+          "action_type": "plan",
+          "timestamp": "2026-02-05T23:34:37.452264",
+          "description": "Created test generation plan",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "67d3c3e7",
+          "action_type": "reasoning",
+          "timestamp": "2026-02-05T23:34:42.627618",
+          "description": "LLM reasoning (JSON)",
+          "latency_ms": 5175
+        },
+        {
+          "action_id": "11100f03",
+          "action_type": "reasoning",
+          "timestamp": "2026-02-05T23:34:47.979274",
+          "description": "LLM reasoning (JSON)",
+          "latency_ms": 5351
+        },
+        {
+          "action_id": "b70cc3cc",
+          "action_type": "reasoning",
+          "timestamp": "2026-02-05T23:34:52.199526",
+          "description": "LLM reasoning (JSON)",
+          "latency_ms": 4220
+        },
+        {
+          "action_id": "069e89ec",
+          "action_type": "reasoning",
+          "timestamp": "2026-02-05T23:34:56.084327",
+          "description": "LLM reasoning (JSON)",
+          "latency_ms": 3882
+        },
+        {
+          "action_id": "97bdbf46",
+          "action_type": "reasoning",
+          "timestamp": "2026-02-05T23:34:58.589290",
+          "description": "LLM reasoning (JSON)",
+          "latency_ms": 2504
+        },
+        {
+          "action_id": "47bb4d21",
+          "action_type": "reasoning",
+          "timestamp": "2026-02-05T23:35:05.338113",
+          "description": "LLM reasoning (JSON)",
+          "latency_ms": 6748
+        },
+        {
+          "action_id": "91d7c597",
+          "action_type": "generate_test",
+          "timestamp": "2026-02-05T23:35:05.338113",
+          "description": "Generated 10 test cases",
+          "latency_ms": 0
+        }
+      ],
+      "success": true,
+      "total_latency_ms": 38831
+    },
+    {
+      "trace_id": "89045c0c",
+      "agent_name": "TestExecutor",
+      "task": "Execute 10 test cases",
+      "num_actions": 20,
+      "actions": [
+        {
+          "action_id": "d18114b9",
+          "action_type": "execute_test",
+          "timestamp": "2026-02-05T23:35:05.338113",
+          "description": "Executing test 1/10: Apple's Fiscal Year End Date",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "6b1aa038",
+          "action_type": "execute_test",
+          "timestamp": "2026-02-05T23:35:08.442888",
+          "description": "Test 165bea18 completed",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "fb674274",
+          "action_type": "execute_test",
+          "timestamp": "2026-02-05T23:35:08.442888",
+          "description": "Executing test 2/10: Apple's Market Value",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "9a7e6bd7",
+          "action_type": "execute_test",
+          "timestamp": "2026-02-05T23:35:11.158636",
+          "description": "Test cb5ade28 completed",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "82d041a3",
+          "action_type": "execute_test",
+          "timestamp": "2026-02-05T23:35:11.158636",
+          "description": "Executing test 3/10: Apple's Market Segments and Financial Overview",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "72ff0f20",
+          "action_type": "execute_test",
+          "timestamp": "2026-02-05T23:35:13.232068",
+          "description": "Test f86814b7 completed",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "794e331a",
+          "action_type": "execute_test",
+          "timestamp": "2026-02-05T23:35:13.232068",
+          "description": "Executing test 4/10: Apple's Product Lines and Competitive Landscape",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "ffe12a83",
+          "action_type": "execute_test",
+          "timestamp": "2026-02-05T23:35:15.413566",
+          "description": "Test a202fe3b completed",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "5d2544fa",
+          "action_type": "execute_test",
+          "timestamp": "2026-02-05T23:35:15.413566",
+          "description": "Executing test 5/10: Apple's Financial Performance Metrics",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "217f9eb1",
+          "action_type": "execute_test",
+          "timestamp": "2026-02-05T23:35:17.860093",
+          "description": "Test b1590771 completed",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "fd2e5b6d",
+          "action_type": "execute_test",
+          "timestamp": "2026-02-05T23:35:17.860093",
+          "description": "Executing test 6/10: Impact of Macroeconomic Conditions",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "e1af9fbf",
+          "action_type": "execute_test",
+          "timestamp": "2026-02-05T23:35:20.085967",
+          "description": "Test 94c6c832 completed",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "cb139649",
+          "action_type": "execute_test",
+          "timestamp": "2026-02-05T23:35:20.085967",
+          "description": "Executing test 7/10: Inquiry about Apple's future product launches",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "1d83083c",
+          "action_type": "execute_test",
+          "timestamp": "2026-02-05T23:35:21.992889",
+          "description": "Test f3471ce5 completed",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "39931f41",
+          "action_type": "execute_test",
+          "timestamp": "2026-02-05T23:35:21.992889",
+          "description": "Executing test 8/10: Question about Apple's environmental policies",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "a8fe7a3e",
+          "action_type": "execute_test",
+          "timestamp": "2026-02-05T23:35:25.227990",
+          "description": "Test 6aae9b75 completed",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "4dd58e49",
+          "action_type": "execute_test",
+          "timestamp": "2026-02-05T23:35:25.227990",
+          "description": "Executing test 9/10: Misleading Financial Performance Query",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "1917b7f0",
+          "action_type": "execute_test",
+          "timestamp": "2026-02-05T23:35:28.126777",
+          "description": "Test f5b34473 completed",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "f8a85413",
+          "action_type": "execute_test",
+          "timestamp": "2026-02-05T23:35:28.126777",
+          "description": "Executing test 10/10: Apple Inc. Financial Overview for 2023",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "07d94a90",
+          "action_type": "execute_test",
+          "timestamp": "2026-02-05T23:35:31.551125",
+          "description": "Test 30dbfa3c completed",
+          "latency_ms": 0
+        }
+      ],
+      "success": true,
+      "total_latency_ms": 0
+    },
+    {
+      "trace_id": "c6638844",
+      "agent_name": "Evaluator",
+      "task": "Evaluate response for test: Apple Inc. Financial Overview for 2023",
+      "num_actions": 4,
+      "actions": [
+        {
+          "action_id": "f0c4bc37",
+          "action_type": "evaluate",
+          "timestamp": "2026-02-05T23:37:00.151631",
+          "description": "Evaluating response against criteria",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "deed6343",
+          "action_type": "reasoning",
+          "timestamp": "2026-02-05T23:37:03.263087",
+          "description": "LLM reasoning (JSON)",
+          "latency_ms": 3111
+        },
+        {
+          "action_id": "f82c0d0b",
+          "action_type": "reasoning",
+          "timestamp": "2026-02-05T23:37:07.551009",
+          "description": "LLM reasoning (JSON)",
+          "latency_ms": 4287
+        },
+        {
+          "action_id": "4ea56738",
+          "action_type": "evaluate",
+          "timestamp": "2026-02-05T23:37:07.551009",
+          "description": "Evaluation complete: fail",
+          "latency_ms": 0
+        }
+      ],
+      "success": true,
+      "total_latency_ms": 7398
+    },
+    {
+      "trace_id": "b0c047ab",
+      "agent_name": "Orchestrator",
+      "task": "Orchestrate evaluation: Evaluation - 2026-02-05 15:34",
+      "num_actions": 8,
+      "actions": [
+        {
+          "action_id": "b79a7f26",
+          "action_type": "plan",
+          "timestamp": "2026-02-05T23:34:23.785075",
+          "description": "Planning evaluation strategy",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "b6f6c9c1",
+          "action_type": "reasoning",
+          "timestamp": "2026-02-05T23:34:26.500315",
+          "description": "LLM reasoning (JSON)",
+          "latency_ms": 2715
+        },
+        {
+          "action_id": "4fbe4eda",
+          "action_type": "generate_test",
+          "timestamp": "2026-02-05T23:34:26.500315",
+          "description": "Generating 10 test cases",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "37b003e1",
+          "action_type": "execute_test",
+          "timestamp": "2026-02-05T23:35:05.338113",
+          "description": "Executing 10 tests against service",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "96b3cf53",
+          "action_type": "evaluate",
+          "timestamp": "2026-02-05T23:35:31.551125",
+          "description": "Evaluating all responses",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "1af0c7f6",
+          "action_type": "synthesize",
+          "timestamp": "2026-02-05T23:37:07.551009",
+          "description": "Synthesizing evaluation results",
+          "latency_ms": 0
+        },
+        {
+          "action_id": "ddb39caf",
+          "action_type": "reasoning",
+          "timestamp": "2026-02-05T23:37:09.794629",
+          "description": "LLM reasoning (JSON)",
+          "latency_ms": 2231
+        },
+        {
+          "action_id": "87e5c753",
+          "action_type": "synthesize",
+          "timestamp": "2026-02-05T23:37:09.808784",
+          "description": "Evaluation complete",
+          "latency_ms": 0
+        }
+      ],
+      "success": true,
+      "total_latency_ms": 4946
+    }
+  ]
+}
