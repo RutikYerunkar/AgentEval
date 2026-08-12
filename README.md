@@ -43,7 +43,7 @@ Shipping an AI feature is easy.
 
 **Knowing where it fails is the hard part.**
 
-AgentEval treats AI evaluation as an active engineering workflow instead of a static spreadsheet of hand-written prompts. Give it a knowledge base and a running AI service, and a coordinated set of agents will:
+AgentEval treats AI evaluation as an active engineering workflow instead of a static spreadsheet of handwritten prompts. Give it a knowledge base and a running AI service, and a coordinated set of agents will:
 
 > **Analyze the source material → generate diverse tests → call the live service → judge each answer across multiple dimensions → detect concrete failure modes → rank issues by severity → produce structured evaluation artifacts.**
 
@@ -53,19 +53,19 @@ The system is especially useful for RAG applications, where "the model answered"
 
 ## 🎯 30-second recruiter overview
 
-AgentEval is a compact but production-shaped **LLM evaluation system** built around explicit agent responsibilities rather than one giant prompt.
+AgentEval is a compact but production shaped **LLM evaluation system** built around explicit agent responsibilities rather than one giant prompt.
 
 It demonstrates:
 
-- **Multi-agent orchestration** — an `OrchestratorAgent` coordinates test generation, service execution, response evaluation, and final synthesis.
-- **Knowledge-base-driven test generation** — source content is analyzed before test cases are generated across multiple behavioral archetypes.
-- **Live black-box evaluation** — tests are sent to a real HTTP service, not evaluated against mocked model output.
-- **LLM-as-a-judge** — responses are scored across six weighted quality dimensions with a critical-issue override.
-- **Failure diagnosis** — the evaluator turns low-quality behavior into concrete issue objects with severity, evidence, and recommendations.
-- **Provider abstraction** — OpenAI, Anthropic, and a mock LLM client share the same async interface.
-- **Service abstraction** — the target can expose a simple `/query` API or an OpenAI-compatible `/v1/chat/completions` interface.
-- **Traceability** — agents record structured action traces, timing, reasoning calls, and execution metadata.
-- **Structured artifacts** — run summaries, test results, and trace summaries can be exported as JSON for analysis, reporting, or downstream tooling.
+- **Multi-agent orchestration**: an `OrchestratorAgent` coordinates test generation, service execution, response evaluation, and final synthesis.
+- **Knowledge-base-driven test generation**: source content is analyzed before test cases are generated across multiple behavioral archetypes.
+- **Live black-box evaluation**: tests are sent to a real HTTP service, not evaluated against mocked model output.
+- **LLM-as-a-judge**: responses are scored across six weighted quality dimensions with a critical issue override.
+- **Failure diagnosis**: the evaluator turns low-quality behavior into concrete issue objects with severity, evidence, and recommendations.
+- **Provider abstraction**: OpenAI, Anthropic, and a mock LLM client share the same async interface.
+- **Service abstraction**: the target can expose a simple `/query` API or an OpenAI-compatible `/v1/chat/completions` interface.
+- **Traceability**: agents record structured action traces, timing, reasoning calls, and execution metadata.
+- **Structured artifacts**: run summaries, test results, and trace summaries can be exported as JSON for analysis, reporting, or downstream tooling.
 
 ---
 
@@ -77,7 +77,7 @@ It demonstrates:
 
 ### 🧬 Generate
 
-The test generator first analyzes the knowledge base, extracts topics/entities/facts, and then creates test cases across multiple failure-oriented archetypes.
+The test generator first analyzes the knowledge base, extracts topics/entities/facts, and then creates test cases across multiple failure oriented archetypes.
 
 </td>
 <td width="25%" valign="top">
@@ -150,7 +150,7 @@ flowchart LR
 
 The **judge model and the system under test are separate concerns**.
 
-AgentEval never assumes that the model used to generate/evaluate tests is the same model powering the target application. The target is accessed through a service adapter, while evaluation intelligence comes through a provider-agnostic LLM client.
+AgentEval never assumes that the model used to generate/evaluate tests is the same model powering the target application. The target is accessed through a service adapter, while evaluation intelligence comes through a provider agnostic LLM client.
 
 That separation makes the harness useful for evaluating:
 
@@ -443,7 +443,7 @@ The trace model can capture:
 - success / failure
 - final output
 
-When an evaluation is serialized with the current `to_dict()` methods, the exported trace keeps the run-friendly action summary and latency metadata rather than dumping full prompts/completions into the JSON artifact.
+When an evaluation is serialized with the current `to_dict()` methods, the exported trace keeps the run friendly action summary and latency metadata rather than dumping full prompts/completions into the JSON artifact.
 
 This is a useful boundary: the runtime can be richly inspectable without making the default output unnecessarily noisy.
 
@@ -451,7 +451,7 @@ This is a useful boundary: the runtime can be richly inspectable without making 
 
 # 📊 Real evaluation evidence included in the repository
 
-This repository does not only contain framework code. It includes **three saved evaluation runs** plus terminal-output evidence in `Outputs.docx`.
+This repository does not only contain framework code. It includes **three saved evaluation runs** plus terminal output evidence in `Outputs.docx`.
 
 The included demo loaded **10 public SEC 10-K filings** across Apple, Amazon, Meta, Microsoft, and NVIDIA:
 
@@ -473,7 +473,7 @@ Across those runs, the evaluator surfaced issues including:
 
 **missing information · grounding failures · factual errors · relevance failures · coherence problems · prohibited content**
 
-The target service frequently responded with content that did not match the financial-document domain, and AgentEval correctly converted that behavior into explicit failure signals rather than silently accepting fluent but unsupported answers.
+The target service frequently responded with content that did not match the financial document domain, and AgentEval correctly converted that behavior into explicit failure signals rather than silently accepting fluent but unsupported answers.
 
 <br />
 
@@ -504,9 +504,9 @@ The target service frequently responded with content that did not match the fina
 </tr>
 </table>
 
-> 🧠 **Why low scores are useful here:** these runs are not presented as benchmark wins. They demonstrate that AgentEval can recognize when a target AI service is confidently wrong, poorly grounded, incomplete, or irrelevant — and turn that behavior into structured engineering feedback.
+> 🧠 **Why low scores are useful here:** these runs are not presented as benchmark wins. They demonstrate that AgentEval can recognize when a target AI service is confidently wrong, poorly grounded, incomplete, or irrelevant and turn that behavior into structured engineering feedback.
 
-**Example signal captured by the evaluator:** one response reached a weighted score of **0.75**, but was still classified as **FAIL** because the judge detected a **critical missing-information issue**. This is intentional: severe failures should not disappear behind a healthy-looking average.
+**Example signal captured by the evaluator:** one response reached a weighted score of **0.75**, but was still classified as **FAIL** because the judge detected a **critical missing-information issue**. This is intentional: severe failures should not disappear behind a healthy looking average.
 
 ---
 
@@ -803,7 +803,7 @@ LLM providers and service calls are implemented with async HTTP clients. The cur
 
 # 🔭 Natural next iterations
 
-These are future extensions — **not features claimed by the current repository**:
+These are future extensions - **not features claimed by the current repository**:
 
 - **Chunk-aware KB coverage** instead of analyzing only a leading excerpt of very large corpora
 - **Retrieval-aware judging** that can explicitly supply selected ground-truth source chunks to the evaluator
@@ -822,9 +822,9 @@ These are future extensions — **not features claimed by the current repository
 
 # 👨‍💻 Built by Rutik Yerunkar
 
-I’m an **AI Engineer / Software Engineer** and a **USC M.S. Computer Science – Artificial Intelligence graduate** focused on the engineering layer that makes LLM systems measurable, debuggable, and dependable.
+I’m an **AI Engineer / Software Engineer** and a **USC M.S. Computer Science graduate** focused on the engineering layer that makes LLM systems measurable, debuggable, and dependable.
 
-My work spans **RAG, agentic workflows, LLM evaluation, failure-mode analysis, backend APIs, data pipelines, and end-to-end AI products**. Professionally, I’ve worked on multi-stage evaluation systems that transform unstructured AI-service descriptions into structured requirements, testable failure modes, and quality signals.
+My work spans **RAG, agentic workflows, LLM evaluation, failure mode analysis, backend APIs, data pipelines, and end-to-end AI products**. Professionally, I’ve worked on multi-stage evaluation systems that transform unstructured AI service descriptions into structured requirements, testable failure modes, and quality signals.
 
 AgentEval reflects a question I care about deeply:
 
