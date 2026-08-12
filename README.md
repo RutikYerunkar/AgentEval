@@ -4,7 +4,7 @@
 
 ### Break your AI before your users do.
 
-**A multi-agent evaluation harness that turns a knowledge base into intelligent test cases, executes them against a live RAG/LLM service, grades every response with an LLM judge, and converts failures into severity-ranked engineering signals.**
+**A multi-agent evaluation harness that turns a knowledge base into intelligent test cases, executes them against a live RAG/LLM service, grades every response with an LLM judge, and converts failures into severity ranked engineering signals.**
 
 <br />
 
